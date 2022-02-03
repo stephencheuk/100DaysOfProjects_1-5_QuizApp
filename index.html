@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <title>Codedamn - Quiz Project</title>
+</head>
+
+<body>
+    <header>
+        <button id=leaderboard onClick="showHighScore()">View Highscores <i class="fas fa-hand-point-left fa-lg"></i></button>
+        <div class='header-timer'>Time: <span id='timer'></span></div>
+    </header>
+    <main class='body-main'>
+    </main>
+    <script src="assets/script.js"></script>
+    <script type="text/template" id="main">
+        <div class="main">
+            <div class="main-border">
+                <h2 class="main-border-header">Coding Quiz Challenge</h2>
+                <div class="main-border-line">Try to answer to following Code-related question within the time limit.</div>
+                <div class="main-border-line">Keep in mind that incorrect answers will penalize your score/time by ten seconds!</div>
+                <button type='button' onClick="showQuestion(0)">Start Quiz</button>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="template">
+        <div class="question">
+            <div class="question-border">
+                <h2 class="question-border-header">Question Title</h2>
+                <div class="question-border-options">
+                    <button type='button' class="question-border-option">Answer Options</button>
+                </div>
+                <div class="question-border-result">Result</div>
+            </div>
+        </div>    
+    </script>
+    <script type="text/template" id="score">
+        <div class="score">
+            <div class="score-border">
+                <h2 class="score-border-header">All done!</h2>
+                <div class="score-border-text">
+                    Your final score is <span id='score'>0</span>.
+                </div>
+                <div class="score-border-text">
+                    Enter initals: <input type='text' id="initials" size=5 />
+                    <button type='button' class="score-border-button">Submit</button>
+                </div>
+            </div>
+        </div>    
+    </script>
+    <script type="text/template" id="highscore">
+        <div class="highscore">
+            <div class="highscore-border">
+                <h2 class="highscore-border-header">Highscores</h2>
+                <div class="highscore-border-text">
+                    <div class="highscore-border-text-line">1.</div>
+                </div>
+                <div class="highscore-border-button">
+                    <button type='button' onClick="showMain()">Go Back</button>
+                    <button type='button' onClick="clearHighScore()">Clear Highscores</button>
+                </div>
+            </div>
+        </div>    
+    </script>
+</body>
+
+</html>
